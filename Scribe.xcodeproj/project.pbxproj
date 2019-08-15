@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		D174A08923062454009977D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D174A08823062454009977D4 /* AppDelegate.swift */; };
-		D174A08B23062454009977D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D174A08A23062454009977D4 /* ViewController.swift */; };
+		D174A08B23062454009977D4 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D174A08A23062454009977D4 /* MainVC.swift */; };
 		D174A08E23062454009977D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D174A08C23062454009977D4 /* Main.storyboard */; };
 		D174A09023062455009977D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D174A08F23062455009977D4 /* Assets.xcassets */; };
 		D174A09323062455009977D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D174A09123062455009977D4 /* LaunchScreen.storyboard */; };
+		D174A09D230625FD009977D4 /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D174A09C230625FD009977D4 /* CircleButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D174A08523062454009977D4 /* Scribe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scribe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D174A08823062454009977D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D174A08A23062454009977D4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D174A08A23062454009977D4 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		D174A08D23062454009977D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D174A08F23062455009977D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D174A09223062455009977D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D174A09423062455009977D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D174A09C230625FD009977D4 /* CircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +56,31 @@
 		D174A08723062454009977D4 /* Scribe */ = {
 			isa = PBXGroup;
 			children = (
+				D174A09B23062581009977D4 /* View */,
+				D174A09A2306257A009977D4 /* Controller */,
 				D174A08823062454009977D4 /* AppDelegate.swift */,
-				D174A08A23062454009977D4 /* ViewController.swift */,
 				D174A08C23062454009977D4 /* Main.storyboard */,
 				D174A08F23062455009977D4 /* Assets.xcassets */,
 				D174A09123062455009977D4 /* LaunchScreen.storyboard */,
 				D174A09423062455009977D4 /* Info.plist */,
 			);
 			path = Scribe;
+			sourceTree = "<group>";
+		};
+		D174A09A2306257A009977D4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D174A08A23062454009977D4 /* MainVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D174A09B23062581009977D4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D174A09C230625FD009977D4 /* CircleButton.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +154,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D174A08B23062454009977D4 /* ViewController.swift in Sources */,
+				D174A09D230625FD009977D4 /* CircleButton.swift in Sources */,
+				D174A08B23062454009977D4 /* MainVC.swift in Sources */,
 				D174A08923062454009977D4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,6 +305,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KC7AXFA778;
 				INFOPLIST_FILE = Scribe/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -292,7 +313,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.Kotb.Scribe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -303,6 +324,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KC7AXFA778;
 				INFOPLIST_FILE = Scribe/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -310,7 +332,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.Kotb.Scribe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
